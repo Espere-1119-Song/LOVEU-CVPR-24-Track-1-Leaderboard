@@ -6,50 +6,56 @@
 <title>Leaderboard</title>
 <style>
   body {
-    background-color: #D2B48C; /* This sets the background color similar to the one in your image */
+    background-color: #D2B48C;
     font-family: Arial, sans-serif;
   }
   .leaderboard {
-    width: 60%;
+    width: 80%;
     margin: 30px auto;
-    background-color: #000080; /* A navy color for the leaderboard header */
+    background-color: #000080;
     color: white;
     text-align: center;
+    border-collapse: collapse;
     border-radius: 5px;
   }
-  .entry {
-    background-color: #F0F8FF; /* A light background for the leaderboard entries */
+  .leaderboard thead {
+    background-color: #000080; /* Navy color for header */
+  }
+  .leaderboard th, .leaderboard td {
     padding: 10px;
-    border-bottom: 1px solid #ddd; /* A line between entries */
+    border: 1px solid #ddd; /* Border for the cells */
   }
-  .entry:last-child {
-    border-bottom: none;
+  .leaderboard tbody tr:nth-child(odd) {
+    background-color: #F0F8FF; /* Zebra striping for rows */
   }
-  .entry img {
-    height: 30px;
-    width: auto;
-    vertical-align: middle;
-  }
-  .entry .rank {
-    font-weight: bold;
-  }
-  .entry .score {
-    float: right;
+  .leaderboard tbody tr:nth-child(even) {
+    background-color: #FAEBD7;
   }
 </style>
 </head>
 <body>
 
-<div class="leaderboard">
-  <h1>Leaderboard</h1>
-  <div class="entry">
-    <span class="rank">1</span>
-    <img src="path_to_turtle_icon" alt="Turtle Icon">
-    <span>Player One</span>
-    <span class="score">1500 pts</span>
-  </div>
-  <!-- Repeat for as many entries as needed -->
-</div>
+<table class="leaderboard">
+  <thead>
+    <tr>
+      <th>Serial Number</th>
+      <th>User ID</th>
+      <th>Submission Time</th>
+      <th>Global Accuracy</th>
+      <th>Global Score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>User123</td>
+      <td>2024-03-24 10:00</td>
+      <td>98%</td>
+      <td>1500 pts</td>
+    </tr>
+    <!-- Repeat <tr> for each entry in the leaderboard -->
+  </tbody>
+</table>
 
 </body>
 </html>
