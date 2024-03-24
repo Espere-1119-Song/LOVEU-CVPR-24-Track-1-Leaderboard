@@ -10,30 +10,47 @@
   h1 {padding:30px 0; text-align: center; font-size: 50px; color: #fff8dc;}
 
   body {
-    background-color: #9b8975;
+    background-color: #D2B48C; /* Adjust the color to match your design */
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
   }
   .leaderboard {
-    width: 80%;
-    margin: 30px auto;
-    background-color: #000080;
+    width: 300px; /* Adjust as needed */
+    background-color: #333; /* Dark background for the header */
     color: white;
-    text-align: center;
-    border-collapse: collapse;
     border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   }
-  .leaderboard thead {
-    background-color: #000080; /* Navy color for header */
+  .header {
+    background-color: #000080; /* Navy color for the header */
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 1.5em;
   }
-  .leaderboard th, .leaderboard td {
-    padding: 10px;
-    border: 1px solid #ddd; /* Border for the cells */
+  .entry {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
   }
-  .leaderboard tbody tr:nth-child(odd) {
-    background-color: #F0F8FF; /* Zebra striping for rows */
+  .entry:last-child {
+    border-bottom: none;
   }
-  .leaderboard tbody tr:nth-child(even) {
-    background-color: #FAEBD7;
+  .entry img {
+    border-radius: 50%;
+  }
+  .score {
+    background-color: #ff4136; /* Adjust the color to match your design */
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: white;
   }
 </style>
 </head>
@@ -50,17 +67,26 @@
       <th>Global Score 📈</th>
     </tr>
   </thead>
-  <tbody>
-    <tr>
-      <td>1</td>
-      <td>User123</td>
-      <td>2024-03-24 10:00</td>
-      <td>98%</td>
-      <td>1500 pts</td>
-    </tr>
-    <!-- Repeat <tr> for each entry in the leaderboard -->
-  </tbody>
 </table>
+
+<div class="leaderboard">
+  <div class="header">Leaderboard</div>
+  <div class="entry">
+    <div class="left">
+      🏆
+      jfg
+    </div>
+    <div class="score">56</div>
+  </div>
+  <div class="entry">
+    <div class="left">
+      🏆
+      HH
+    </div>
+    <div class="score">21</div>
+  </div>
+  <!-- Repeat .entry for more leaderboard items -->
+</div>
 
 </body>
 </html>
