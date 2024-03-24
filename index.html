@@ -3,14 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Leaderboard 🏆</title>
+<title>Leaderboard</title>
 <style>
-  html, body, div, figure, p, h1, h2, ul, li, input, button, textarea {margin:0; padding:0; box-sizing: border-box; font-family: sans-serif;}
-
-  h1 {padding:30px 0; text-align: center; font-size: 50px; color: #fff8dc;}
-
   body {
-    background-color: #D2B48C; /* Adjust the color to match your design */
+    background-color: #D2B48C;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -19,71 +15,78 @@
     align-items: center;
     height: 100vh;
   }
+  .container {
+    text-align: center;
+  }
+  .leaderboard-title {
+    color: #000080;
+    margin-bottom: 20px;
+  }
   .leaderboard {
-    width: 300px; /* Adjust as needed */
-    background-color: #333; /* Dark background for the header */
+    background-color: #000080;
     color: white;
+    display: inline-block;
     border-radius: 5px;
-    overflow: hidden;
+    padding: 20px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   }
-  .header {
-    background-color: #000080; /* Navy color for the header */
-    padding: 10px 20px;
-    text-align: center;
-    font-size: 1.5em;
+  .leaderboard-header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #fff;
+  }
+  .leaderboard-content {
+    text-align: left;
   }
   .entry {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
-    border-bottom: 1px solid #ddd;
+    align-items: center;
+    margin-bottom: 10px;
   }
   .entry:last-child {
-    border-bottom: none;
+    margin-bottom: 0;
+  }
+  .entry .name {
+    display: flex;
+    align-items: center;
   }
   .entry img {
-    border-radius: 50%;
+    margin-right: 10px;
   }
   .score {
-    background-color: #ff4136; /* Adjust the color to match your design */
+    background-color: #ff4136;
+    padding: 5px 15px;
     border-radius: 5px;
-    padding: 5px 10px;
     color: white;
   }
 </style>
 </head>
-  
 <body>
-<h1 contenteditable="true">Leaderboard 🏆</h1>
 
-
-<div class="leaderboard">
-  <div class="header">
-    <tr>
-      <th>Serial Number 🏷️</th>
-      <th>User ID 👤</th>
-      <th>Submission Time ⏰</th>
-      <th>Global Accuracy 🎯</th>
-      <th>Global Score 📈</th>
-    </tr>
-  </div>
-  <div class="entry">
-    <div class="left">
-      🏆
-      jfg
+<div class="container">
+  <h1 class="leaderboard-title">🏆 Leaderboard</h1>
+  <div class="leaderboard">
+    <div class="leaderboard-header">
+      <div>Serial Number 🏅</div>
+      <div>User ID 👤</div>
+      <div>Submission Time ⏱️</div>
+      <div>Global Accuracy 🎯</div>
+      <div>Global Score 📈</div>
     </div>
-    <div class="score">56</div>
-  </div>
-  <div class="entry">
-    <div class="left">
-      🏆
-      HH
+    <div class="leaderboard-content">
+      <div class="entry">
+        <div class="name"><img src="trophy.png" alt="Trophy" style="width:20px;height:20px;"> jfg</div>
+        <div class="score">56</div>
+      </div>
+      <div class="entry">
+        <div class="name"><img src="trophy.png" alt="Trophy" style="width:20px;height:20px;"> HH</div>
+        <div class="score">21</div>
+      </div>
     </div>
-    <div class="score">21</div>
   </div>
-  <!-- Repeat .entry for more leaderboard items -->
 </div>
 
 </body>
